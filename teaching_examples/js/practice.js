@@ -61,3 +61,22 @@ function doSomething(e) {
         console.log('There is nothing in the e variable');
     }
 }
+
+let items = ['html', 'css'];
+let person = [];
+person['name'] = 'Andrew';
+person['lastName'] = 'Jester';
+person['age'] = 25;
+
+function addTO() {
+
+    let item = document.getElementById('item').value;
+    items.push(item);
+    console.log("what's in my array")
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+
+    }
+
+    console.log(person['name'] + ' ' + person['lastName'] + ' ' + person['age']);
+}
