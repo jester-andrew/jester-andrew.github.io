@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Practice</title>
+    <link rel="stylesheet" href="/javaScript/css/screen.css">
+</head>
+
+<body>
+    <h1>Get ready to practice your multiplication tables!</h1>
+    <section id="begin">
+        <h2>Pick the question bounds</h2>
+        <form>
+            <label for="lnumber">largest Number to multiply</label>
+            <input type="text" placeholder="largest number" id="lnumber">
+            <label>Number of questions</label>
+            <input type="text" placeholder="Number of Questions" id="nquestions">
+
+            <input type="button" value="Start Game" onclick="setGame()">
+        </form>
+    </section>
+
+    <section id="problem">
+
+        <div id="output">
+
+        </div>
+        <form id="resultsbtn">
+
+            <input type="button" value="Show Results" onclick="results()">
+
+        </form>
+    </section>
+    <section id="end">
+        <div id="results">
+
+        </div>
+
+        <form>
+            <input type="submit" value="Play Again">
+        </form>
+    </section>
+
+    <script src="/javaScript/js/math.js"></script>
+</body>
+
+</html>

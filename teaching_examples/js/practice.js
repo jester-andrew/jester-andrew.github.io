@@ -12,7 +12,7 @@ function loops() {
             console.log("For loop: "); //outputs to the console
 
             //for loop
-            for (let i = 0; i < number; i++) {
+            for (let i = 2; i < number; i++) {
 
                 console.log('count: ' + i); //outputs to console
             }
@@ -48,7 +48,7 @@ function loops() {
             //if none of the cases match the default code will execute
         default:
 
-            const e = 'No option selected. Please select an option.'; //set variable e
+            const e = ''; //set variable e
             doSomething(e); //function call passing e as a parameter
 
             break;
@@ -77,7 +77,7 @@ let items = ['html', 'css'];
 let person = [];
 person['name'] = 'Andrew';
 person['lastName'] = 'Jester';
-person['age'] = 25;
+person.age = 25;
 
 
 //addTo function adds items to an array
@@ -105,5 +105,5 @@ function addTO() {
     }
 
     //outputs contents of the associative array
-    console.log(person['name'] + ' ' + person['lastName'] + ' ' + person['age']);
+    console.log(person['name'] + ' ' + person.lastName + ' ' + person['age']);
 }

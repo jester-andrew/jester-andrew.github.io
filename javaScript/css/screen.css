@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #05386b
+}
+
+body {
+    font-family: sans-serif;
+    width: 80%;
+    background-color: #edf5e1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    padding: 1em;
+    background-color: #5cdb95;
+    text-align: center;
+    color: white;
+}
+
+#begin {
+    margin-top: 3em;
+    padding-bottom: 3em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+label {
+    display: none;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    height: 2em;
+    font-size: 1em;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: .75em;
+}
+
+.flex {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#output {
+    margin-top: 3em;
+}
+
+#equation {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+#resultsbtn {
+    margin-top: 5em;
+    padding-bottom: 3em;
+}
+
+.message {
+    color: green;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+#results {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
