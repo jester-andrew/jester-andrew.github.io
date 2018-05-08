@@ -97,3 +97,9 @@ h3 {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+#directions {
+    text-align: center;
+    font-weight: bold;
+    margin-top: .5em;
+}

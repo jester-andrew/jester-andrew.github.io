@@ -88,7 +88,7 @@ function checkAnswer(q) {
     let y = document.getElementsByClassName('message');
     let z = document.getElementsByClassName('error')
 
-    if (x[q].value == 0) {
+    if (x[q].value == 0 || x[q].value == '') {
         alert('Please fill in an answer.');
     } else if (answers[q] == x[q].value) {
         correct++
@@ -134,7 +134,7 @@ function results() {
         lgrade = "F";
     }
 
-    results.innerHTML = "<p>You got " + correct + " correct and " + missed + " wrong</p><p>Your percentage is " + grade + "%</p><p>Your letter garde is " + lgrade + "</p>";
+    results.innerHTML = "<p>You got " + correct + " correct and " + missed + " wrong</p><p>Your percentage is " + grade + "%</p><p>Your letter grade is " + lgrade + "</p>";
     document.getElementById('begin').style.display = 'none';
     document.getElementById('problem').style.display = 'none';
     document.getElementById('end').style.display = 'block';
