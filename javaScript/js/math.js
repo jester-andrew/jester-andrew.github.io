@@ -6,6 +6,7 @@ document.getElementById('end').style.display = 'none';
 let queue = [];
 let queue2 = [];
 let answers = [];
+let isanswered = [];
 let missed = 0;
 let correct = 0;
 
@@ -65,9 +66,9 @@ function playGame(games) {
         let answer = queue[i] * queue2[i];
         answers.push(answer);
 
-        output += "<h3>Qestion " + (i + 1) + "</h3>";
+        output += "<h3>Question " + (i + 1) + "</h3>";
         output += "<p id='equation'>" + queue[i] + " * " + queue2[i] + " =</p>";
-        output += "</p><input type='text' placeholder='Your Answer' class='code'><input type='button' value='Check Answer' onclick='checkAnswer(";
+        output += "</p><input type='text' placeholder='Your Answer' class='code' onblur='checkAnswer(";
         output += i;
         output += ")'>";
         output += "<p class='message'></p><p class='error'></p>";
@@ -88,14 +89,20 @@ function checkAnswer(q) {
     let y = document.getElementsByClassName('message');
     let z = document.getElementsByClassName('error')
 
-    if (x[q].value == 0 || x[q].value == '') {
-        alert('Please fill in an answer.');
-    } else if (answers[q] == x[q].value) {
-        correct++
-        y[q].innerHTML = "<strong>Correct</strong>";
+    if (isanswered[q]) {
+        alert('You already answered that question, please move on to the next one.');
     } else {
-        missed++
-        z[q].innerHTML = "<strong>Wrong the answer is " + (queue[q] * queue2[q]) + "</strong>";
+        if (x[q].value == 0 || x[q].value == '') {
+            y[q].innerHTML = 'Please fill in an answer.';
+        } else if (answers[q] == x[q].value) {
+            correct++
+            y[q].innerHTML = "<strong>Correct</strong>";
+            isanswered[q] = true;
+        } else {
+            missed++
+            z[q].innerHTML = "<strong>Wrong the answer is " + (queue[q] * queue2[q]) + "</strong>";
+            isanswered[q] = true;
+        }
     }
 }
 
