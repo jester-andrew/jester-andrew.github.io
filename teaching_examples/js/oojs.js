@@ -74,7 +74,7 @@ class Deer extends Animal {
     constructor(name) {
         super(name);
         this._legs = 4;
-        this._movement = 'grazez';
+        this._movement = 'grazes';
         this._noise = 'chewing';
     }
 
