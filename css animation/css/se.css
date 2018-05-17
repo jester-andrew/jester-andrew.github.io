@@ -1,0 +1,159 @@
+body {
+    font-family: sans-serif;
+    background-color: #41484d;
+}
+
+#move {
+    color: white;
+    position: relative;
+    animation-name: clock;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes clock {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 200px;
+        top: 75px;
+    }
+    50% {
+        left: 100px;
+        top: 75px;
+    }
+    75% {
+        left: 80px;
+        top: 200px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+h1 {
+    color: white;
+}
+
+div {
+    width: 60px;
+    height: 50px;
+    background-color: orange;
+    border: 1px solid black;
+    transition: all 1s;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    display: none;
+    text-align: center;
+}
+
+#google:hover>p {
+    display: block;
+}
+
+#bing:hover>p {
+    display: block;
+}
+
+#yahoo:hover>p {
+    display: block;
+}
+
+#ask:hover>p {
+    display: block;
+}
+
+#aol:hover>p {
+    display: block;
+}
+
+#baidu:hover>p {
+    display: block;
+}
+
+#wolframalpha:hover>p {
+    display: block;
+}
+
+#duck:hover>p {
+    display: block;
+}
+
+#archive:hover>p {
+    display: block;
+}
+
+#yandex:hover>p {
+    display: block;
+}
+
+div:hover {
+    width: 400px;
+    height: 100px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+img {
+    border-radius: 300px;
+}
+
+.twelve {
+    transform: rotate(0deg);
+}
+
+.eleven {
+    transform: rotate(330deg);
+}
+
+.ten {
+    transform: rotate(300deg);
+}
+
+.nine {
+    transform: rotate(270deg);
+}
+
+.eight {
+    transform: rotate(240deg);
+}
+
+.seven {
+    transform: rotate(210deg);
+}
+
+.six {
+    transform: rotate(180deg);
+}
+
+.five {
+    transform: rotate(150deg)
+}
+
+.four {
+    transform: rotate(120deg)
+}
+
+.three {
+    transform: rotate(90deg)
+}
+
+.two {
+    transform: rotate(60deg)
+}
+
+.one {
+    transform: rotate(30deg)
+}
