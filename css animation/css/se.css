@@ -17,16 +17,16 @@ body {
         top: 0px;
     }
     25% {
-        left: 200px;
-        top: 75px;
+        left: 100px;
+        top: 0px;
     }
     50% {
         left: 100px;
-        top: 75px;
+        top: 100px;
     }
     75% {
-        left: 80px;
-        top: 200px;
+        left: 0px;
+        top: 100px;
     }
     100% {
         left: 0px;
