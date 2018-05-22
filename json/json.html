@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Database</title>
+    <link rel="stylesheet" href="css/json.css">
+</head>
+
+<body id="load">
+    <section class="view" id="start">
+        <h1>What would you like to do?</h1>
+        <form>
+            <input type="button" value="Add new contact" id="add">
+            <input type="button" value="View Contacts" id="view">
+        </form>
+    </section>
+    <form id="enter" class="hide">
+        <h1>Enter New Contact</h1>
+        <input type="text" placeholder="First Name" id="fName">
+        <input type="text" placeholder="Last Name" id="lName">
+        <input type="tel" placeholder="Phone: 555-555-5555" id="phone" maxlength="12">
+        <input type="email" placeholder="Email: example@example.com" id="email"><br>
+        <input type="submit" value="Enter Contact" id="ctbtn">
+    </form>
+    <section id="contactList" class="hide">
+        <h2>Contact List</h2>
+        <div id="out">
+            No contacts found in your list.
+        </div>
+    </section>
+    <script src="js/json.js"></script>
+</body>
+
+</html>

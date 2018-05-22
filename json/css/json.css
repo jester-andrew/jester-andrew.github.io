@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    margin-bottom: 1em;
+    height: 2em;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.view {
+    display: block;
+}
