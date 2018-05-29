@@ -1,5 +1,5 @@
 {
-    "14ers": [{
+    "all": [{
         "name": "Mt. Elbert",
         "elevation": 14433,
         "routeName": "Northeast Ridge",
@@ -86,7 +86,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Mosquito Range",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Lincoln%2C+Democrat%2C+Cameron+and+Bross"
     }, {
         "name": "Grays Peak",
         "elevation": 14278,
@@ -425,9 +425,9 @@
         "trailheadLocation": "39.151747, -106.411981",
         "roundTripMiles": 9,
         "elevationGainInFeet": 4700,
-        "difficultyClass": 1,
+        "difficultyClass": 4,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
     }, {
         "name": "Handies Peak",
         "elevation": 14058,
@@ -438,7 +438,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Handies+Peak"
     }, {
         "name": "Culebra Peak",
         "elevation": 14053,
@@ -449,7 +449,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sangre de Cristo",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Culebra+Peak"
     }, {
         "name": "Ellingwood Point",
         "elevation": 14048,
@@ -460,7 +460,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sangre de Cristo",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Blanca%2C+Ellingwood+and+Little+Bear"
     }, {
         "name": "Mt. Lindsey",
         "elevation": 14048,
@@ -471,7 +471,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sangre de Cristo",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Mt.+Lindsey"
     }, {
         "name": "Little Bear Peak",
         "elevation": 14043,
@@ -482,7 +482,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sangre de Cristo",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Blanca%2C+Ellingwood+and+Little+Bear"
     }, {
         "name": "Mt. Sherman",
         "elevation": 14043,
@@ -493,7 +493,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Mosquito Range",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Mt.+Sherman"
     }, {
         "name": "Redcloud Peak",
         "elevation": 14041,
@@ -504,7 +504,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Redcloud+Peak+and+Sunshine+Peak"
     }, {
         "name": "Pyramid Peak",
         "elevation": 14025,
@@ -515,7 +515,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Elk Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Maroon+Bells+and+Pyramid+Peak"
     }, {
         "name": "Wilson Peak",
         "elevation": 14023,
@@ -526,7 +526,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Mt.+Wilson%2C+Wilson+Peak%2C+and+El+Diente+Peak"
     }, {
         "name": "Wetterhorn Peak",
         "elevation": 14021,
@@ -537,7 +537,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Wetterhorn+Peak"
     }, {
         "name": "San Luis Peak",
         "elevation": 14022,
@@ -548,7 +548,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=San+Luis+Peak"
     }, {
         "name": "Mt. of the Holy Cross",
         "elevation": 14011,
@@ -559,7 +559,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sawatch Range",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Mt.+of+the+Holy+Cross"
     }, {
         "name": "Huron Peak",
         "elevation": 14010,
@@ -570,7 +570,7 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "Sawatch Range",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Huron+Peak"
     }, {
         "name": "Sunshine Peak",
         "elevation": 14007,
@@ -581,6 +581,6 @@
         "elevationGainInFeet": 4700,
         "difficultyClass": 1,
         "range": "San Juan Mountains",
-        "url": "http://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert"
+        "url": "https://www.14ers.com/routelist.php?peak=Redcloud+Peak+and+Sunshine+Peak"
     }]
 }
