@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+p {}
+
+body {
+    font-family: sans-serif;
+    background-color: gray;
+    background-image: url('/img/Mount-Sneffels-at-Sunset-Colorado-John-Fielder.jpg');
+}
+
+ol {
+    font-size: 1.35em;
+    width: 80%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: gray;
+    opacity: .9;
+    border-radius: 10px;
+    list-style: none;
+    border: black solid 3px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+li {
+    text-align: left;
+    margin-bottom: .44em;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+div {
+    background-color: blue;
+    border: black solid 4px;
+    border-radius: 10px;
+    color: oldlace;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+#background {
+    background-color: gray;
+    opacity: .9;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#background li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+.info {
+    font-size: 1.2em;
+}
+
+#back:hover {
+    background-color: black;
+    cursor: pointer;
+}
