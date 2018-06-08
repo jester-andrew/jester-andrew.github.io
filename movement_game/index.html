@@ -5,23 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         canvas {
-            border: 1px solid #d3d3d3;
-            background-color: #f1f1f1;
+            border: 1px solid black;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        
+        button {
+            width: 75px;
+            font-size: 2em;
+            background-color: black;
+            color: white;
+        }
+        
+        body {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: gray;
+            font-family: sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            color: red;
+            text-shadow: 2px 2px black;
+        }
+        
+        div {
+            text-align: center;
+            width: 240px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: red;
+            padding: 2em;
+            border-radius: 500px;
+            border: 2px solid black;
+            margin-top: 2em;
+        }
+        
+        p {
+            text-align: center;
+            color: blue;
+            text-shadow: 1px 1px black;
+            font-size: 1.2em;
         }
     </style>
 </head>
 
-<body onload="startGame()">
-    <script src="/movement_game/movement.js">
-    </script>
-    <div style="text-align:center;width:480px;">
-        <button onclick="moveup()">Thrust</button><br><br>
-        <button onclick="moveleft()">LEFT</button>
-        <button onclick="moveright()">RIGHT</button><br><br>
-        <button onclick="movedown()">DOWN</button>
+<body>
+    <h1>The Maze Game</h1>
+    <p>Test your skills! can you use the arrows to keep the red box within the maze while dodging the asteroids?</p>
+    <div>
+        <button id="btn1">&uarr;</button><br>
+        <button id="btn2">&larr;</button>
+        <button id="btn3">&rarr;</button><br>
+        <button id="btn4">&darr;</button>
     </div>
 
-    <p></p>
+
+    <script src="/movement_game/movement.js">
+    </script>
 </body>
 
 </html>

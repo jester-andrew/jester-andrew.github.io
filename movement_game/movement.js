@@ -1,6 +1,7 @@
-var lander;
+let lander;
 let pad, pad2, pad3, pad4, pad5, pad6, pad7, pad8, pad9, pad10, pad11, pad12, pad13;
 let asteroid, asteroid2, asteroid3, asteroid4, asteroid5;
+
 
 
 
@@ -39,7 +40,7 @@ let myGameArea = {
         //sets canvas as 2d
         this.context = this.canvas.getContext("2d");
         //inserts game area into page
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.insertBefore(this.canvas, document.body.childNodes[5]);
         //re-draws the items on the page every 20 miliseconds
         this.interval = setInterval(updateGameArea, 20);
     },
@@ -140,3 +141,18 @@ function moveleft() {
 function moveright() {
     lander.speedX += .3;
 }
+
+
+window.onload = startGame();
+let btn2 = document.getElementById('btn2');
+let btn3 = document.getElementById('btn3');
+let btn4 = document.getElementById('btn4');
+let btn1 = document.getElementById('btn1');
+
+console.log(btn2);
+
+
+btn1.addEventListener("click", moveup);
+btn2.addEventListener("click", moveleft);
+btn3.addEventListener("click", moveright);
+btn4.addEventListener("click", movedown);
