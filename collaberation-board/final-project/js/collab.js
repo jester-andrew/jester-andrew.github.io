@@ -21,8 +21,7 @@
         convs.on('value', function(snapshot) {
             document.getElementById('chat').innerHTML = '';
             output = []; //clear the array
-            //console.log(JSON.stringify(snapshot.val()));
-            //console.log(JSON.stringify(snapshot.numChildren()));
+
             snapshot.forEach(function(item) {
                 let itemp = JSON.parse(JSON.stringify(item.val()));
                 output.push(itemp);
