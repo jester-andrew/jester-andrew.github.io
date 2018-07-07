@@ -273,6 +273,6 @@
         iden.on("value", function(snapshot) {
 
             console.log(snapshot.val())
-            localStorage.setItem("idenitiy", snapshot.val());
+            localStorage.setItem("idenity", snapshot.val());
 
         });
