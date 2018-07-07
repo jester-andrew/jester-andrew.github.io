@@ -3,6 +3,13 @@ btnNewConv.addEventListener("click", createConversation);
 
 let identity = 0;
 
+let database = firebase.database();
+firebase.database().ref('users/' + userId).set({
+    username: "Andrew Jester",
+    email: "andrewjester92@gmail.com",
+    profile_picture: "my_url"
+});
+
 function createConversation() {
     console.log("creating conversation..");
 
@@ -62,7 +69,6 @@ function insertConv() {
 
     }
 
-
 }
 
 function postComment(e) {
@@ -92,12 +98,6 @@ function postComment(e) {
     postPlace.insertBefore(postContainer, before);
 
     document.getElementById(id).value = '';
-
-
-
-
-
-
 
 }
 
