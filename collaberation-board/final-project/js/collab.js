@@ -102,6 +102,8 @@
                 id: localStorage.getItem("idenity"),
                 posts: [{ test: "test" }]
             });
+
+            document.getElementById('convtitle').value = "";
         }
 
         /***********************************************************
