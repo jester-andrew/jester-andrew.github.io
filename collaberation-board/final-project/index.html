@@ -10,20 +10,26 @@
 </head>
 
 <body>
-    <h1>Let's Chat</h1>
-    <section class="show" id="registerWin">
-        <h2>What should we call you?</h2>
-        <input type="text" id="username" placeholder="User name">
-        <input type="button" id="register" value="register">
-    </section>
-    <section id="welcome-section" class="hide">
-        <h2 id="welcome"></h2>
-        <input type="text" id="convtitle">
-        <input type="button" value="Add Conversation" id="convbtn">
-    </section>
-    <section id="chat" class="hide">
+    <main>
+        <h1>Let's Chat</h1>
+        <div id="wrapper">
+            <aside>
+                <section class="show" id="registerWin">
+                    <h2>What should we call you?</h2>
+                    <input type="text" id="username" placeholder="User name">
+                    <input type="button" id="register" value="register" placeholder="Username">
+                </section>
+                <section id="welcome-section" class="hide">
+                    <h2 id="welcome"></h2>
+                    <input type="text" id="convtitle" placeholder="Conversation Name">
+                    <input type="button" value="Add Conversation" id="convbtn">
+                </section>
+            </aside>
+            <section id="chat" class="hide">
 
-    </section>
+            </section>
+        </div>
+    </main>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="js/collab.js"></script>
 

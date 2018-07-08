@@ -1,7 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
 .show {
     display: block;
 }
 
 .hide {
     display: none;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #99738E;
+}
+
+aside {
+    width: 30%;
+    background-color: #553d67;
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+    border-bottom: black 2px solid;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    border-radius: 5px;
+}
+
+#chat {
+    width: 65%;
+}
+
+h1 {
+    padding-top: .5em;
+    padding-left: 1em;
+    padding-bottom: .5em;
+    background-color: #242582;
+    color: white;
+    border: black 2px solid;
+    border-radius: 5px;
+}
+
+aside h2 {
+    color: white;
+    margin-bottom: 1em;
+}
+
+aside input[type="text"] {
+    border: black solid 1px;
+    width: 80%;
+    height: 35px;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+aside input[type="button"] {
+    background-color: #242582;
+    border: 2px solid #f64c72;
+    width: 50%;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+}
+
+section section h2 {
+    border: black solid 2px;
+    width: 95%;
+    margin-top: .5em;
+    border-radius: 5px;
+    padding: .5em;
+    margin-bottom: .5em;
+    color: white;
+    background-color: #242582;
+}
+
+.post-container {
+    border: 1px black solid;
+    padding: .5em;
+    margin-bottom: .5em;
+    width: 96%;
 }
