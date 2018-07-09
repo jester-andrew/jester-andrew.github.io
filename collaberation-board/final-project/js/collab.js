@@ -132,7 +132,7 @@
         function getDate() {
             let date = new Date();
             let month = date.getMonth();
-            let day = date.getDay();
+            let day = date.getDate();
             let year = date.getFullYear();
             let hour = date.getHours();
             let mins = date.getMinutes();
