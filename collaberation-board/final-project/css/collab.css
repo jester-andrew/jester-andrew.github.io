@@ -68,6 +68,10 @@ aside input[type="button"] {
     font-weight: bold;
 }
 
+aside input[type="button"]:hover {
+    opacity: .5;
+}
+
 section section h2 {
     border: black solid 2px;
     width: 95%;
@@ -79,9 +83,46 @@ section section h2 {
     background-color: #242582;
 }
 
+section section input {
+    width: 25%;
+    display: block;
+    height: 35px;
+    background-color: #242582;
+    border: 2px solid #f64c72;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+}
+
+section section input:hover {
+    opacity: .5;
+}
+
 .post-container {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     padding: .5em;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     width: 96%;
+    font-weight: bolder;
+}
+
+.post-container p {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5em;
+    margin-top: .5em;
+    font-weight: normal;
+}
+
+textarea {
+    width: 75%;
+    height: 60px;
+    font-size: 1.4em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }

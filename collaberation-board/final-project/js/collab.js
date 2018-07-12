@@ -11,6 +11,14 @@
         };
         firebase.initializeApp(config);
 
+        const title = document.getElementsByClassName('title');
+        for (let i = 0; i < title.length; i++) {
+            title[i].addEventListener("click", function(e) {
+                let clicked = e.targ.getAttribute('data-clicked');
+                console.log("click " + clicked);
+            });
+        }
+
         /***********************************************************
          * Read JSON data from the database parse it and insert it 
          * into an array and output the data in a new section for 
@@ -248,6 +256,8 @@
                 let conv = document.createElement("section");
                 conv.setAttribute("id", output[i].convName);
                 let heading = document.createElement("h2");
+                heading.setAttribute("data-clicked", output[i].id)
+                heading.setAttribute("class", "title");
                 let node = document.createTextNode(output[i].convName);
                 let postbtn = document.createElement("input");
                 postbtn.setAttribute("type", "button");
