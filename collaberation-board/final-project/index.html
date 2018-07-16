@@ -13,14 +13,19 @@
     <main>
         <h1>Let's Chat</h1>
         <div id="wrapper">
-            <aside>
-                <section class="show" id="registerWin">
+            <aside class="aside">
+
+                <section class="show opOn" id="registerWin">
                     <h2>What should we call you?</h2>
                     <input type="text" id="username" placeholder="User name">
                     <input type="button" id="register" value="register" placeholder="Username">
                 </section>
+                <p id="ham" class="show">&#9776;</p>
                 <section id="welcome-section" class="hide">
-                    <h2 id="welcome"></h2>
+                    <div class="flex">
+                        <h2 id="welcome"></h2>
+
+                    </div>
                     <input type="text" id="convtitle" placeholder="Conversation Name">
                     <input type="button" value="Add Conversation" id="convbtn">
                 </section>

@@ -10,15 +10,31 @@
             messagingSenderId: "381466676460"
         };
         firebase.initializeApp(config);
+        let targ3;
+        let aside = document.getElementById('ham');
+        let wholeChat = document.getElementById('chat');
+        wholeChat.addEventListener("click", function(evt) {
+            let targ = evt.target.dataset.clicked;
+            let targ2 = evt.target;
+            targ3 = targ2;
+            let conv = document.getElementById(targ);
+            conv.classList.toggle("hide");
+            targ2.classList.add('swap');
+            setTimeout(() => {
+                targ3.classList.remove('swap');
+            }, 3000);
+        });
+        aside.addEventListener("click", minimize);
 
-        const title = document.getElementsByClassName('title');
-        for (let i = 0; i < title.length; i++) {
-            title[i].addEventListener("click", function(e) {
-                let clicked = e.targ.getAttribute('data-clicked');
-                console.log("click " + clicked);
-            });
+        function minimize() {
+            console.log('being called!');
+
+            document.querySelector('aside').classList.toggle("minimize");
+            welcomeSec.classList.toggle("hide");
+            welcomeSec.classList.toggle("opoff");
+
+
         }
-
         /***********************************************************
          * Read JSON data from the database parse it and insert it 
          * into an array and output the data in a new section for 
@@ -49,6 +65,7 @@
                 output2.push(itemp);
 
             });
+            console.log('output2: ')
             console.log(output2);
             updatePosts();
         });
@@ -226,6 +243,7 @@
 
             for (let i = 0; i < output2.length; i++) {
 
+
                 let postContainer = document.createElement('div');
 
                 postContainer.setAttribute("class", "post-container");
@@ -252,11 +270,17 @@
 
             let main = document.getElementById('chat');
             main.innerHTML = '';
+
             for (let i = 0; i < output.length; i++) {
+
+
+                let disappear = document.createElement('div');
+                disappear.setAttribute("class", "disappear");
                 let conv = document.createElement("section");
                 conv.setAttribute("id", output[i].convName);
+                conv.setAttribute("class", "hide");
                 let heading = document.createElement("h2");
-                heading.setAttribute("data-clicked", output[i].id)
+                heading.setAttribute("data-clicked", output[i].convName)
                 heading.setAttribute("class", "title");
                 let node = document.createTextNode(output[i].convName);
                 let postbtn = document.createElement("input");
@@ -270,10 +294,12 @@
                 textBox.setAttribute("id", output[i].id);
 
                 heading.appendChild(node);
-                conv.appendChild(heading);
+                disappear.appendChild(heading);
                 conv.appendChild(textBox);
                 conv.appendChild(postbtn);
-                main.appendChild(conv);
+                disappear.appendChild(heading);
+                disappear.appendChild(conv)
+                main.appendChild(disappear);
 
                 postbtn.addEventListener("click", postComment);
             }

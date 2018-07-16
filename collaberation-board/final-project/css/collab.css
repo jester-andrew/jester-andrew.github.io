@@ -11,6 +11,15 @@ body {
     display: block;
 }
 
+.opoff {
+    opacity: 0;
+}
+
+.opOn {
+    opacity: 1;
+    transition: opacity 10s;
+}
+
 .hide {
     display: none;
 }
@@ -21,7 +30,7 @@ body {
     background-color: #99738E;
 }
 
-aside {
+.aside {
     width: 30%;
     background-color: #553d67;
     border-left: black 2px solid;
@@ -30,6 +39,12 @@ aside {
     padding-top: 1em;
     padding-left: 1.5em;
     border-radius: 5px;
+    transition: width 2s;
+}
+
+.minimize {
+    width: 5%;
+    transition: width 2s;
 }
 
 #chat {
@@ -72,7 +87,7 @@ aside input[type="button"]:hover {
     opacity: .5;
 }
 
-section section h2 {
+.disappear h2 {
     border: black solid 2px;
     width: 95%;
     margin-top: .5em;
@@ -81,6 +96,10 @@ section section h2 {
     margin-bottom: .5em;
     color: white;
     background-color: #242582;
+}
+
+.disappear h2:hover {
+    opacity: .5;
 }
 
 section section input {
@@ -125,4 +144,63 @@ textarea {
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: 1em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+#ham {
+    color: white;
+    font-size: 1.4em;
+    display: block;
+    float: right;
+    margin-right: 1em;
+}
+
+#ham:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.swap {
+    animation-name: swap-color;
+    animation-duration: 2s;
+}
+
+.swap:hover {
+    animation-name: swap-color;
+    animation-duration: 2s;
+}
+
+@keyframes swap-color {
+    0% {
+        background-color: #242582;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: #f64c72;
+        ;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: #242582;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: #f64c72;
+        ;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: #242582;
+        left: 0px;
+        top: 0px;
+    }
 }
