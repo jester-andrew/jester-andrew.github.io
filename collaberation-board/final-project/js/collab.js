@@ -13,6 +13,10 @@
         let targ3;
         let aside = document.getElementById('ham');
         let wholeChat = document.getElementById('chat');
+
+        /**********************************************************
+         *  Event listener that will hide the body of the conversations
+         **********************************************************/
         wholeChat.addEventListener("click", function(evt) {
             let targ = evt.target.dataset.clicked;
             let targ2 = evt.target;
@@ -24,6 +28,11 @@
                 targ3.classList.remove('swap');
             }, 3000);
         });
+
+        /**********************************************************
+         *  Event listener that will hide the sidebar and its 
+         * content
+         **********************************************************/
         aside.addEventListener("click", minimize);
 
         function minimize() {
@@ -56,6 +65,10 @@
             updatePosts();
         });
 
+        /**********************************************************
+         *  This function grabs the posts from the database and 
+         * inserts it into the page
+         **********************************************************/
         let output2 = [];
         let posts = firebase.database().ref().child('post');
         posts.on('value', function(snapshot) {
@@ -209,6 +222,9 @@
             return str;
         }
 
+        /**********************************************************
+         *  This function inserts a post into the database
+         **********************************************************/
         function postComment(e) {
             console.log('posting comment...');
 
@@ -235,6 +251,10 @@
             document.getElementById(id).value = "";
         }
 
+        /**********************************************************
+         *  THis function builds and rebuilds the html to imput 
+         *  the posts
+         **********************************************************/
         function updatePosts() {
 
             let main = document.getElementById('chat');
@@ -243,13 +263,15 @@
 
             for (let i = 0; i < output2.length; i++) {
 
-
                 let postContainer = document.createElement('div');
 
                 postContainer.setAttribute("class", "post-container");
 
                 let timeNode = document.createTextNode(output2[i].username + ' ' + output2[i].time);
                 let postStr = document.createElement("p");
+                if (i == output2.length - 1) {
+                    postStr.classList.add('new');
+                }
                 let node = document.createTextNode(output2[i].message);
 
                 postStr.appendChild(node);
@@ -266,6 +288,10 @@
 
         }
 
+        /**********************************************************
+         *  This function updates and ouputs the new and old 
+         *  conversations 
+         **********************************************************/
         function updateConvs() {
 
             let main = document.getElementById('chat');
@@ -278,7 +304,6 @@
                 disappear.setAttribute("class", "disappear");
                 let conv = document.createElement("section");
                 conv.setAttribute("id", output[i].convName);
-                conv.setAttribute("class", "hide");
                 let heading = document.createElement("h2");
                 heading.setAttribute("data-clicked", output[i].convName)
                 heading.setAttribute("class", "title");
@@ -306,7 +331,10 @@
 
         }
 
-
+        /**********************************************************
+         *  This event listener resets the idenity in local storage 
+         *  for each device using this app
+         **********************************************************/
         let iden = firebase.database().ref().child('idenity');
         iden.on("value", function(snapshot) {
 

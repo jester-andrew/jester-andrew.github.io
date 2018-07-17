@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    background-color: #99738E;
 }
 
 body {
@@ -59,6 +64,7 @@ h1 {
     color: white;
     border: black 2px solid;
     border-radius: 5px;
+    font-family: 'Audiowide', cursive;
 }
 
 aside h2 {
@@ -170,37 +176,79 @@ textarea {
     animation-duration: 2s;
 }
 
+.new {
+    animation-name: new;
+    animation-duration: 25s;
+}
+
 .swap:hover {
     animation-name: swap-color;
+    animation-duration: 2s;
+}
+
+#welcome {
+    animation-name: welcome;
+    animation-iteration-count: 2;
     animation-duration: 2s;
 }
 
 @keyframes swap-color {
     0% {
         background-color: #242582;
-        left: 0px;
-        top: 0px;
     }
     25% {
         background-color: #f64c72;
-        ;
-        left: 200px;
-        top: 0px;
     }
     50% {
         background-color: #242582;
-        left: 200px;
-        top: 200px;
     }
     75% {
         background-color: #f64c72;
-        ;
-        left: 0px;
-        top: 200px;
     }
     100% {
         background-color: #242582;
-        left: 0px;
-        top: 0px;
+    }
+}
+
+@keyframes new {
+    0% {
+        background-color: orangered;
+        color: blue;
+        font-size: 2em;
+    }
+    25% {
+        background-color: orangered;
+        color: blue;
+        font-size: 1.5 em;
+    }
+    50% {
+        background-color: orangered;
+        color: blue;
+        font-size: 1 em;
+    }
+    75% {
+        color: blue;
+        font-size: 1 em;
+    }
+    100% {
+        color: black;
+    }
+}
+
+@keyframes welcome {
+    0% {
+        transform: rotate(2deg);
+    }
+    25% {
+        transform: rotate(-4deg)
+    }
+    50% {
+        transform: rotate(2deg)
+    }
+    75% {
+        transform: rotate(-4deg)
+    }
+    100% {
+        transform: rotate(2deg)
     }
 }
