@@ -4,7 +4,7 @@ const password = localStorage.getItem('password');
 console.log(firstname);
 
 if (firstname !== null && email !== null && password !== null) {
-    window.location.replace("/views/login.html")
+    window.location.replace("/rmp_project/views/login.html")
 }
 
 const button = document.getElementById('register');
@@ -29,5 +29,5 @@ function collectData() {
     localStorage.setItem("password", mypassword);
     localStorage.setItem("card", '{"cards":[]}');
     localStorage.setItem("account", '{"accounts":[]}');
-    window.location.replace("/views/login.html");
+    window.location.replace("/rmp_project/views/login.html");
 }

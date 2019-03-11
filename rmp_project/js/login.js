@@ -16,6 +16,6 @@ function login() {
     let savedPassword = localStorage.getItem("password");
 
     if (password == savedPassword) {
-        window.location.replace("/views/payments.html")
+        window.location.replace("/rmp_project/views/payments.html")
     }
 }
