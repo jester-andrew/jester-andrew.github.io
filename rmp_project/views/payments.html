@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+
+<body id="main">
+    <header class="main-header">
+        <p id="welcome">Welcome <span id="username">User</span></p>
+        <img src="/img/logo.png" alt="rmp-logo">
+    </header>
+    <section id="payments" class="view">
+        <div id="bill">
+            <h1 id="billh">Current Bill</h1>
+
+            <table>
+                <tr>
+                    <td>Current due</td>
+                    <td>1/1/2019</td>
+                    <td id="current">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Past due</td>
+                    <td></td>
+                    <td id="past">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td class="red" id="total">$0.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <form id="pay-form">
+            <div class="flex-payfrom">
+                <Select id="prefered-payment" onchange="changeMethod()">
+                <option value="card">Credit/Debit</option>
+                <option value="bank">Bank Account</option>
+                <option value="alt">Apple Pay</option>
+                <option value="alt">WePay</option>
+                <option value="alt">PayPal</option>
+            </Select>
+                <select id="cards">
+
+            </select>
+                <select id="accounts" class="hide">
+                
+            </select>
+            </div>
+            <div id="auto-container" class="hide">
+                <input type="checkbox" name="auto-pay" id="auto-pay" value="1" onchange="checkChang()">
+                <label for="auto-pay">Auto-Payments</label>
+                <select name="day" id="day" onchange="dayChange()">
+                    <option disabled>Payment Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                </select>
+            </div>
+            <input type="button" value="Make Payment" onclick="makePayment()" id="make-payment">
+            <div id="add-links">
+                <a href="/views/addCard.html" onclick="addCard(event)" class="view" id="add-card">Add Card</a>
+                <a href="/views/addAccount.html" onclick="addAccount(event)" class="hide" id="add-account">Add Account</a>
+            </div>
+        </form>
+    </section>
+    <section id="acc" class="hide">
+        <h2>Your Account</h2>
+        <p><span class="bold">Name: </span>
+            <span id="acc-name">
+                </span>
+        </p>
+        <p class="bold">Address:</p>
+        <p>123 Cool st.</p>
+        <p>Rexburg, ID</p>
+        <p class="bold">Phone:</p>
+        <p>555-555-5554</p>
+        <p class="bold">Email:</p>
+        <p>cooluser@gmail.com</p>
+        <p class="bold">Account #:</p>
+        <p>123456-08-4 | <span class="green">active</span></p>
+        <a href="#">Update Account Info</a>
+    </section>
+    <section id="stats" class="hide">
+        <h1>Monthly Usage</h1>
+        <img src="/img/graph.png" alt="Usage graph" width="365" style="margin:auto; padding-top:3em;">
+    </section>
+
+    <Section id="addCard" class="hide" onsubmit="return nextStep('finish')">
+        <form>
+            <div id="step1">
+                <h2>On your card what is your:</h2>
+                <input type="text" placeholder="First name" id="first">
+                <input type="text" placeholder="Last name" id="last">
+                <input type="button" value="Next" id="next-first" class="next" onclick="nextStep('step2')">
+            </div>
+            <div id="step2" class="hide">
+                <h2>Card Information:</h2>
+                <input type="text" placeholder="Card #" id="card">
+                <input type="text" placeholder="CVV" id="cvv">
+                <input type="date" name="" id="date"><br><br>
+                <input type="button" value="Next" id="next-second" class="next" onclick="nextStep('step3')">
+            </div>
+            <div id="step3" class="hide">
+                <h2>Billing Information:</h2>
+                <input type="text" placeholder="Address" id="address">
+                <input type="text" placeholder="City" id="city">
+                <input type="text" placeholder="Apartment" id="apt">
+                <input type="text" placeholder="Zip Code" id="zip">
+                <input type="text" placeholder="State" id="state">
+                <input type="submit" value="Finish" id="finish-first" class="next">
+            </div>
+
+        </form>
+
+    </Section>
+
+    <Section id="addAcount" class="hide">
+        <form action="" onsubmit="return saveAccountName()">
+            <h2>Account Information:</h2>
+            <input type="text" placeholder="Nick Name" id="nickname">
+            <input type="text" placeholder="Account Number" id="accountNO">
+            <input type="text" placeholder="Routing Number" id="routinNO">
+            <input type="submit" value="Finish" id="next-first" class="next" width="50">
+        </form>
+
+    </Section>
+    <section id="message-page" class="hide">
+        <p id="message"></p>
+        <input type="button" value="Email Confirmation" id="make-payment">
+    </section>
+    <nav>
+        <a href="/views/accounts.html" class="nav-item" id="not-picked" onclick="changeIndicator(event)">Accounts</a>
+        <a href="/views/payments.html" class="nav-item" id="picked" onclick="changeIndicator(event)">Payments</a>
+        <a href="/views/stats.html" class="nav-item" id="not-picked" onclick="changeIndicator(event)">Stats</a>
+    </nav>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

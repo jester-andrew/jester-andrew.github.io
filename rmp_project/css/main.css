@@ -1,0 +1,197 @@
+body {
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+form input {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.red {
+    color: rgb(233, 35, 40);
+}
+
+header {
+    border-bottom: black solid 1px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: .25em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 1;
+    width: 96%;
+}
+
+.nav-item {
+    min-width: 33%;
+    text-align: center;
+    border: black 1px solid;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+}
+
+#picked {
+    background-color: rgb(56, 103, 164);
+    color: white;
+    font-weight: bold;
+}
+
+#not-picked {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#welcome {
+    font-size: 1.2em;
+    font-weight: bold
+}
+
+.hide {
+    display: none;
+}
+
+.view {
+    display: block;
+}
+
+table {
+    width: 98%;
+    margin: auto;
+}
+
+#bill {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: .5em;
+}
+
+#bill table {
+    font-size: 1.2em;
+    border-collapse: collapse;
+}
+
+#bill table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke
+}
+
+#billh {
+    margin-top: 0;
+    margin-left: .5em;
+}
+
+.no-border {
+    border: none;
+    margin-top: 1em;
+}
+
+.flex-payfrom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#pay-form {
+    width: 100%;
+    margin-top: 1em;
+}
+
+#pay-form #prefered-payment {
+    width: 45%;
+    font-size: 1.3em;
+}
+
+#pay-form #cards {
+    width: 45%;
+    font-size: 1.3em;
+}
+
+#pay-form #accounts {
+    width: 45%;
+    font-size: 1.3em;
+}
+
+#auto-container {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+#auto-container select {
+    width: 15%;
+    font-size: .8em;
+}
+
+#auto-container input {
+    transform: scale(2);
+}
+
+#make-payment {
+    width: 75%;
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(56, 103, 164);
+    color: white;
+    padding: .25em;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+}
+
+#add-links {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#message {
+    color: green;
+    font-size: 2em;
+    width: 85%;
+    margin-top: 2em;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.green {
+    color: green;
+}
+
+.next {
+    float: right;
+    background-color: rgb(56, 103, 164);
+    color: white;
+    padding: .25em;
+    border: none;
+    border-radius: 10px;
+}
