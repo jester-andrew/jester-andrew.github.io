@@ -53,6 +53,10 @@
                 
             </select>
             </div>
+            <div id="add-links">
+                <a href="/rmp_project/views/addCard.html" onclick="addCard(event)" class="view" id="add-card">Add Card</a>
+                <a href="/rmp_project/views/addAccount.html" onclick="addAccount(event)" class="hide" id="add-account">Add Account</a>
+            </div>
             <div id="auto-container" class="hide">
                 <input type="checkbox" name="auto-pay" id="auto-pay" value="1" onchange="checkChang()">
                 <label for="auto-pay">Auto-Payments</label>
@@ -88,11 +92,9 @@
                     <option value="28">28</option>
                 </select>
             </div>
+
             <input type="button" value="Make Payment" onclick="makePayment()" id="make-payment">
-            <div id="add-links">
-                <a href="/rmp_project/views/addCard.html" onclick="addCard(event)" class="view" id="add-card">Add Card</a>
-                <a href="/rmp_project/views/addAccount.html" onclick="addAccount(event)" class="hide" id="add-account">Add Account</a>
-            </div>
+
         </form>
     </section>
     <section id="acc" class="hide">
@@ -118,7 +120,7 @@
     </section>
 
     <Section id="addCard" class="hide" onsubmit="return nextStep('finish')">
-        <form>
+        <form id="addCardForm">
             <div id="step1">
                 <h2>On your card what is your:</h2>
                 <input type="text" placeholder="First name" id="first">
@@ -147,7 +149,7 @@
     </Section>
 
     <Section id="addAcount" class="hide">
-        <form action="" onsubmit="return saveAccountName()">
+        <form action="" onsubmit="return saveAccountName()" id="addAcountForm">
             <h2>Account Information:</h2>
             <input type="text" placeholder="Nick Name" id="nickname">
             <input type="text" placeholder="Account Number" id="accountNO">

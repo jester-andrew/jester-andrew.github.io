@@ -61,6 +61,18 @@ document.getElementById('accounts').innerHTML = bankOptions;
 
 function changeIndicator(event) {
     event.preventDefault();
+    //clear forms when navigating
+    document.getElementById('addCardForm').reset();
+    document.getElementById('addAcountForm').reset();
+
+    //reset form starting point
+    let step1 = document.getElementById('step1');
+    let step2 = document.getElementById('step2');
+    let step3 = document.getElementById('step3');
+
+    step1.setAttribute('class', 'view');
+    step2.setAttribute('class', 'hide');
+    step3.setAttribute('class', 'hide');
 
     //deselect last picked item
     let notPicked = document.getElementById('picked');
@@ -124,6 +136,7 @@ function changeMethod(event) {
     let makePayment = document.getElementById('make-payment');
     let addCard = document.getElementById('add-card');
     let addAccount = document.getElementById('add-account');
+    let links = document.getElementById('add-links');
     //console.log(value);
 
     if (value == 'card') {
@@ -134,6 +147,7 @@ function changeMethod(event) {
         makePayment.setAttribute("class", "view");
         addCard.setAttribute('class', 'view');
         addAccount.setAttribute("class", "hide");
+        links.setAttribute('class', 'view');
 
     } else if (value == 'bank') {
         if (document.getElementById('auto-pay').checked) {
@@ -144,6 +158,7 @@ function changeMethod(event) {
         autoContainer.setAttribute('class', 'view');
         addCard.setAttribute('class', 'hide');
         addAccount.setAttribute("class", "view");
+        links.setAttribute('class', 'view');
 
     } else {
 
@@ -153,6 +168,8 @@ function changeMethod(event) {
         makePayment.setAttribute("class", "view");
         addCard.setAttribute('class', 'hide');
         addAccount.setAttribute("class", "hide");
+        links.setAttribute('class', 'hide');
+
 
     }
 }

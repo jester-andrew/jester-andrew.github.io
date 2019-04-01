@@ -168,8 +168,20 @@ tr:nth-child(even) {
 }
 
 #add-links {
-    text-align: center;
     font-size: 1.4em;
+    margin-top: .5em;
+    text-align: center;
+    border: 1px solid rgb(56, 103, 164);
+    width: 45%;
+    margin-left: 55%;
+    background-color: rgb(56, 103, 164);
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#add-links a {
+    color: white;
 }
 
 #message {
